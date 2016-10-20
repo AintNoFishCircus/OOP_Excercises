@@ -1,0 +1,5 @@
+package mitarbeiter_Vererbung;
+
+public class Angestellter {
+
+}

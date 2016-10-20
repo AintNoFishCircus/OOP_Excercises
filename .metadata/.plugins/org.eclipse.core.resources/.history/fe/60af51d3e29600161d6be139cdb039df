@@ -1,0 +1,16 @@
+package mitarbeiter_Vererbung;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Mitarbeiter m1 = new Lehrling("Peter", "Lustig", 560.);
+		Mitarbeiter m2 = new Angestellter("Hans", "Meyer", 1500.);
+		Mitarbeiter m3 = new Angestellter("Jürgen", "Müller", 1500.);
+		
+		m1.zeigeDaten();
+
+	}
+
+}

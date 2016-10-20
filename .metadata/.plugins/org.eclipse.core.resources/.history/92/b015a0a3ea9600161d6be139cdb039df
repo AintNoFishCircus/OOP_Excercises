@@ -1,0 +1,26 @@
+package quadrat_sort_interface;
+
+import java.lang.Comparable;
+public class Quadrat implements Comparable<Object>{
+
+	protected int seitenlaenge;
+	
+	public Quadrat(int seitenlaenge){
+		this.seitenlaenge = seitenlaenge;
+	}
+	
+	public String toString(){
+		return "Quadrat mit Flaeche: " + (seitenlaenge * seitenlaenge);
+	}
+	
+	public int compareTo(Quadrat q){
+		if (this.compareTo(q)== 0){
+			return 0;
+		}else{
+			return 1;
+		}
+		
+	}
+	
+	
+}

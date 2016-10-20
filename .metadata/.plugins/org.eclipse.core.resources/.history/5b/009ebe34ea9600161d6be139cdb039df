@@ -1,0 +1,16 @@
+package quadrat_sort_interface;
+
+public class Quadrat{
+
+	protected int seitenlaenge;
+	
+	public Quadrat(int seitenlaenge){
+		this.seitenlaenge = seitenlaenge;
+	}
+	
+	public String toString(){
+		return "Quadrat mit Flaeche: " + (seitenlaenge * seitenlaenge);
+	}
+	
+	
+}

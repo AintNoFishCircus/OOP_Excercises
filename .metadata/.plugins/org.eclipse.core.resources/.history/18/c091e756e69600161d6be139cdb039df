@@ -1,0 +1,12 @@
+package tank_Vererbung;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		VorratsTank vT1 = new VorratsTank(200.,"Eisen");
+		vT1.printStatus();
+	}
+
+}
