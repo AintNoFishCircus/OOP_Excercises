@@ -1,0 +1,17 @@
+package hipHOP;
+
+public class Hip extends Thread{
+	
+	public void run(){
+		while (true){
+			try{
+				Thread.sleep(1);
+				System.out.print("Hip");
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+		}
+	}
+
+	
+}

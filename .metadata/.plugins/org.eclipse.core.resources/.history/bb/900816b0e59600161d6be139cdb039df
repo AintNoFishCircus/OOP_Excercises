@@ -1,9 +1,0 @@
-package tank_Vererbung;
-
-public class ProduktTank {
-
-	public ProduktTank(double fassung, String inhalt){
-		super(fassung, inhalt);
-		
-	}
-}

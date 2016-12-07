@@ -1,6 +1,7 @@
 package verkettete_liste;
 
 public class List {
+	public int length;
 	private Node head;
 	private Node tail;
 	private Node iterator;
@@ -48,12 +49,12 @@ public class List {
 			head.setNext(n);
 			tail = head;
 			iterator = tail;
-			
+			length = 1;
 		}else{
 			head.setNext(n);
 			n.setNext(tail);
 			head = n;
-			
+			length += 1;
 		}
 		
 	}

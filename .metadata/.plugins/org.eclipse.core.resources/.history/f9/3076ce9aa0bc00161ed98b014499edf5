@@ -1,0 +1,30 @@
+package charcounter;
+import java.io.*;
+
+public class Counter {
+
+	private int rowcounter = 1;
+	private int charcounter;
+	
+	public Counter(){
+		
+	}
+	public int count(String file) throws IOException{
+		BufferedReader in = new BufferedReader(new FileReader(file));
+		int buffer = 0;
+		String s = Integer.toString(buffer);
+		while((buffer = in.read())!= -1){
+			
+			if(s.equals("\n")){
+				rowcounter++;
+			}else if (buffer == 13){
+				
+			}else{
+				charcounter++;
+			}
+		}
+		in.close();
+		System.out.println("Die Datei hat " + rowcounter + " Zeilen.");
+		return charcounter;
+	}
+}

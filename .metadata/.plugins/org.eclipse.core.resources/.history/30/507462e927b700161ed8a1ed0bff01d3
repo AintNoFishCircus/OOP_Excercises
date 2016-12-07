@@ -1,0 +1,37 @@
+package simpleIOTool;
+import java.io.*;
+import java.util.Scanner;
+public class SimpleFileWriter {
+	
+	public static void writeToFile ()throws IOException{
+		Scanner sc = new Scanner(System.in);
+		BufferedWriter out;
+		InputStreamReader in;
+		String file = "test.txt";
+		
+		String result = "";
+		String s = ">";
+		try{
+		in = new InputStreamReader(System.in);
+		out = new BufferedWriter(new FileWriter(file));
+		while(true){
+			 s = sc.nextLine();
+			if(s.equals("ende")){
+				break;
+			}
+			 result+= s;
+			
+		}
+		out.write("> ");
+		out.write(result);
+		sc.close();
+		in.close();
+		out.close();
+		System.out.println(">>Wrote following text to " + file +"<<");
+		System.out.println(result);
+		}catch(Exception IOException){
+			System.out.println("Can not write to file" + file);
+		}
+	}
+
+}

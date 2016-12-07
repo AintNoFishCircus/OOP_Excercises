@@ -1,0 +1,22 @@
+package charcounter;
+import java.io.*;
+
+public class Counter {
+
+	private int rowcounter;
+	private int charcounter;
+	
+	public Counter(){
+		
+	}
+	public int count(String file) throws IOException{
+		BufferedReader in = new BufferedReader(new FileReader(file));
+		while(in.read()!= -1){
+			charcounter++;
+			if(in.equals("\n")){
+				rowcounter++;
+			}
+		}
+		return charcounter;
+	}
+}

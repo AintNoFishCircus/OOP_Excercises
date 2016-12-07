@@ -1,0 +1,27 @@
+package reservierung;
+
+public class ZugInfo{
+	
+	private int n = 0;
+	
+	public ZugInfo(){
+		
+	}
+	public int nochFrei(){
+		while(n <= 100){
+			try{
+				Thread.sleep(100);
+				n += 1;
+				return n;
+			}catch(InterruptedException e){
+				
+			}
+			
+		}
+		
+		return n;
+	}
+		
+	
+
+}

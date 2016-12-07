@@ -1,0 +1,32 @@
+package reservierung;
+
+public class ZugInfo{
+	private final int PLAETZE = 100;
+	private int platz = 0;
+	private int frei = PLAETZE;
+	
+	
+	public ZugInfo(){
+		
+	}
+	public int nochFrei(){
+		
+		try{
+			Thread.sleep(100);
+			
+		}catch(InterruptedException e){
+			
+		}
+		
+		if (platz < PLAETZE){
+			frei--;
+			++platz;
+			return platz;
+		}else{
+			return -1;
+		}
+	}
+		
+	
+
+}

@@ -1,0 +1,34 @@
+package reservierung;
+
+public class ZugInfo{
+	private final int PLAETZE = 100;
+	private int platz = 0;
+	private int frei = PLAETZE;
+	
+	
+	public ZugInfo(){
+		
+	}
+	public synchronized int nochFrei(){
+		
+		try{
+			Thread.sleep(100);
+			
+		}catch(InterruptedException e){
+			
+		}
+		
+		if (platz < PLAETZE){
+			frei--;
+			++platz;
+			System.out.println("Noch " + frei + " Plätze verfügbar.");
+			return platz;
+		}else{
+			System.out.println("Keine Plätze mehr frei.");
+			return -1;
+		}
+	}
+		
+	
+
+}

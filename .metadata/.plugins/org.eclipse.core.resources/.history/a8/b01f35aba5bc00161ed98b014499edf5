@@ -1,0 +1,31 @@
+package laufzeitmessung;
+import java.io.*;
+
+
+public class Unbuffered {
+
+	
+	private long dauer;
+	private long stop;
+	
+	public long read()throws IOException{
+		long start = System.currentTimeMillis();
+		FileInputStream in = new FileInputStream("test.txt");
+		FileOutputStream out = new FileOutputStream("kopie.txt");
+		while(in.read()!= -1){
+			out.write(1);
+		}
+		stop = System.currentTimeMillis();
+		dauer = stop - start;
+		return dauer;
+	}
+	
+	public static void main (String [] args){
+		Unbuffered ub = new Unbuffered();
+		try{
+			System.out.println(ub.read());
+		}catch(IOException e){
+			
+		}
+	}
+}
